@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter array size:");
+        int n = scanner.nextInt(); // Number of elements in the array
+
+        System.out.println("Enter array elements:");
+        int[] arr1 = new int[n];
+        int[] arr2 = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr1[i] = scanner.nextInt(); // Read elements into arr1
+            arr2[i] = arr1[i]; // Create a duplicate array arr2 with the same values
+        }
+
+        // Using Arrays.equals to compare the contents of the arrays
+        boolean arraysEqual = Arrays.equals(arr1, arr2);
+
+        if (arraysEqual) {
+            System.out.println("The arrays are equal.");
+        } else {
+            System.out.println("The arrays are not equal.");
+        }
+    }
+}
